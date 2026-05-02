@@ -1,0 +1,21 @@
+data:
+  output_dir: artifacts/strict
+train:
+  dataset_dir: artifacts/strict
+  output_dir: runs/content
+  seed: 13
+  batch_size: 32
+  epochs: 10
+  learning_rate: 0.001
+  device: auto
+model:
+  model_type: content
+  embedding_type: code_pool
+  word2vec_path:
+  freeze_embeddings: false
+  code_embedding_dim: 128
+  visit_dim: 128
+  hidden_dim: 128
+  num_layers: 1
+  dropout: 0.1
+  num_topics: 50

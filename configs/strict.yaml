@@ -1,0 +1,34 @@
+data:
+  raw_zip: resource/S1_Data.zip
+  raw_member: S1_Data.txt
+  output_dir: artifacts/strict
+  seed: 13
+  valid_fraction: 0.15
+  test_fraction: 0.20
+  max_visits:
+  train_word2vec: false
+  embedding_dim: 100
+  word2vec_epochs: 10
+train:
+  dataset_dir: artifacts/strict
+  output_dir: runs/strict
+  seed: 13
+  batch_size: 32
+  epochs: 10
+  learning_rate: 0.001
+  weight_decay: 0.0
+  device: auto
+  num_workers: 0
+model:
+  model_type: gru
+  embedding_type: code_pool
+  word2vec_path:
+  freeze_embeddings: false
+  code_embedding_dim: 128
+  visit_dim: 128
+  hidden_dim: 128
+  num_layers: 1
+  dropout: 0.1
+  num_topics: 50
+  transformer_heads: 4
+  transformer_ff_dim: 256
